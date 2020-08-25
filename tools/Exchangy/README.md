@@ -1,6 +1,6 @@
 ## Exchangy - Exchange Server version & patchlevel detection   
 * Requires: OWA to run at target!
-* Works: remote / unauthicated / (BlackBox view)
+* Works: remote / unauthenticated / (BlackBox view)
 * CrossCompatibilty: Win / Linux / py2.7 / py3.7 
 * Supports: from Exchange Server 2000 up to 2019
 * Works for targets with SSL/TLS in any version
