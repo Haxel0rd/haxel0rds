@@ -1,3 +1,5 @@
+## BRB (rework in almost done), check back in a few days...
+
 ## Exchangy - Exchange Server version & patchlevel detection   
 * Requires: OWA to run at target!
 * Works: remote / unauthenticated / (BlackBox view)
