@@ -1,5 +1,4 @@
-## Exchangy - Exchange Server version & patchlevel detection   
-* Version: v1.01 
+## Exchangy v1.01 - Exchange Server version & patchlevel detection   
 * RECODED! now made for longterm stability! New core, new internal database (now independant from msdocs), updater, etc. 
 * NEW features: detections updater, hint a new tool version, target online-checks, manual enter mode, bugfixes, improved errorhandling, etc. 
 * Requires: Exchange with OWA to run at target
