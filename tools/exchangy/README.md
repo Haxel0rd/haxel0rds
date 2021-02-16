@@ -31,7 +31,7 @@ python3 exchangy.py -t 127.0.0.1:3301/foo/bar
 
 ## Not included (maybe in the future):
 * Quiet-mode: output only JSON Format => either version or error 
-  (this was meant for better framework integration, but for a dev it <br />shouldn't be a big deal to 'grep' from current/more chatty output
+  (this was meant for better framework integration, <br />but for a dev it shouldn't be a big deal to 'grep' from current/more chatty output
 * CVE awareness: show if server is vulnerable, but i don't have the time <br />to update and maintain a list of CVE's (ontop of updates for new exchange patchlevels)
 
 ## About
