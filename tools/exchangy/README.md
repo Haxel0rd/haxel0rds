@@ -17,22 +17,25 @@
 * help page:          python3 exchangy.py -h
 * set target:         python3 exchangy.py -t mail.someserver.com
 * set custom port:    python3 exchangy.py -t mail.someserver.com -p 8443
-* This works also: <br />
-python3 exchangy.py -t https://mail.someserver.com/someurl/cutoff/fi .. <br />
-(the tool uses base url and discards the leftover, so you can paste full or partial url for more comfort)
-* or this <br />
-python3 exchangy.py -t 127.0.0.1:3301/foo/bar
+* This works also:    python3 exchangy.py -t https://mail.someserver.com/someurl/cutoff/fi ..
+                      (the tool uses base url and discards the leftover, so you can paste full or partial url for more comfort)
+* Another example:    python3 exchangy.py -t 127.0.0.1:3301/foo/bar
 * skip online probe:  python3 exchangy.py -s
+                      skips the "is target online?" checks
 * skip (db) update:   python3 exchangy.py -u    
-  // skips database updates (updates for tool must be done by manual download anyways)
+                      skips database updates (updates for tool must be done by manual download anyways)
 * enter buildno:      python3 exchangy.py -e    
-  // (in enter mode, no requests to a target are being made, the number is <br />entered manually and then looked up in the tools internal database)
+                      in enter mode, no requests to a target are being made, the number 
+                      is entered manually and then looked up in the tools internal database
 <br />
 
 ## Not included (maybe in the future):
-* Quiet-mode: output only JSON Format => either version or error 
-  (this was meant for better framework integration, <br />but for a dev it shouldn't be a big deal to 'grep' from current/more chatty output (hint: errors always start like ">> ERROR:", without quotes)
-* CVE awareness: show if server is vulnerable, but i don't have the time <br />to update and maintain a list of CVE's (ontop of updates for new exchange patchlevels)
+* CVE awareness: show if server is vulnerable, but i don't have the time 
+  maintain a list of Echange related CVE's (ontop of updates for new exchange patchlevels)
+* Quiet-mode: only output either the detected version or error (in JSON format)
+  This was meant for better framework integration, but on the other hand it shouldn't be a big deal for a 
+  dev to 'grep' from current/more chatty output (hint: errors always start like ">> ERROR: ", without quotes)
+<br />
 
 ## About
 * Version: v1.01
@@ -40,12 +43,13 @@ python3 exchangy.py -t 127.0.0.1:3301/foo/bar
 * Author: Haxel0rd
 * Published under the GNU General Public Licence v3
 * BUG REPORTS TO: twitter.com/haxel0rd
-* Changelog v1.1: recoded, better core, improved detections, now running with internal db, improved bypasses, <br />detection updater, show new tool version, target online probes, new modes (skip online checks, skip updates, manual enter mode),
-improved error handling, several bugfixes, coded tidy-up
-* State: actively updating detections, only fixing major/breaking bugs (no new features atm)
-* Check tools commented code header section for additional infos (i.e. regarding support of weak SSL/TLS ciphers).
+* State: actively updating detections, 
+  fixing major/breaking bugs and those that dont require 
+  too much time investment (dont want to touch depper parts of the code). Atm not planed to add new features.
+* Changelog v1.1: recoded, better core, improved detections, now running with internal db, improved bypasses,
+  detection updater, show new tool version, target online probes, new modes (skip online checks, skip updates, 
+  manual enter mode), improved error handling, several bugfixes, coded tidy-up.
+* Check tools header comment-section for additional infos (i.e. regarding non-supported weak SSL/TLS ciphers)
 <br />
 
 May the force be with you.
-
-
