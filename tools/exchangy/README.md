@@ -40,7 +40,7 @@ python3 exchangy.py -t 127.0.0.1:3301/foo/bar
 * Author: Haxel0rd
 * Published under the GNU General Public Licence v3
 * BUG REPORTS TO: twitter.com/haxel0rd
-* Changelog v1.1: recoded, better core, improved detections, now running with internal db, improved bypasses, <br />detection updater, show new tool version, target online probes, new modes (skip onlie, skip updates, enter mode),<br />   improved error handling, several bugfixes, coded tidy-up
+* Changelog v1.1: recoded, better core, improved detections, now running with internal db, improved bypasses, <br />detection updater, show new tool version, target online probes, new modes (skip online checks, skip updates, enter mode),<br />   improved error handling, several bugfixes, coded tidy-up
 * State: actively updating detections, only fixing major/breaking bugs (no new features atm)
 * Check tools commented code header section for additional infos (i.e. regarding support of weak SSL/TLS ciphers).
 <br />
