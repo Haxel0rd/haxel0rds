@@ -35,6 +35,7 @@
 * Quiet-mode: only output either the detected version or error (in JSON format)
   This was meant for better framework integration, but on the other hand it shouldn't be a big deal for a 
   dev to 'grep' from current/more chatty output (hint: errors always start like ">> ERROR: ", without quotes)
+* In manual enter mode (-e), add optional feeding of the number like -e 1.22.333, but this wasn't implemented.
 <br />
 
 ## About
@@ -48,7 +49,7 @@
   too much time investment (dont want to touch depper parts of the code). Atm not planed to add new features.
 * Changelog v1.1: recoded, better core, improved detections, now running with internal db, improved bypasses,
   detection updater, show new tool version, target online probes, new modes (skip online checks, skip updates, 
-  manual enter mode), improved error handling, several bugfixes, coded tidy-up.
+  manual enter mode), improved error handling, several bugfixes, code tidied up and commented.
 * Check tools header comment-section for additional infos (i.e. regarding non-supported weak SSL/TLS ciphers)
 <br />
 
