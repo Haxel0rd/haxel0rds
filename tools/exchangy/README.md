@@ -27,7 +27,7 @@ python3 exchangy.py -t 127.0.0.1:3301/foo/bar
   // skips database updates (updates for tool must be done by manual download ayways)
 * enter buildno:      python3 exchangy.py -e    
   // (in enter mode, no requests to a target are being made, the number is <br />entered manually and then looked up in the tools internal database)
-* in the end i thought of a quiet (-q) mode that only outputs only the version in JSON format (for better integration into frameworks), but this idea
+* NOT included: i thought of a quiet (-q) mode that only outputs only the version in JSON format (for better integration into frameworks), but this idea
   came up to late- the recoding was done and i wanted to move on to other projects. But in the end, a dev can also simply "grep" the numbers from tools 
   output and put it into his own prefered format, this shouldn't be a big deal at all.
 <br />
