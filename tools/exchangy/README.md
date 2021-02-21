@@ -29,8 +29,8 @@
 <br />
 
 ## Not included (maybe in the future):
-* CVE awareness: show if server is vulnerable, but i don't have the time 
-  maintain a list of Echange related CVE's (ontop of updates for new exchange patchlevels)
+* CVE awareness: show if s server is vulnerable. But i dropped on this as i don't have the time 
+  maintain a list of Exchange related CVE's (ontop of updates for new exchange patchlevels)
 * Quiet-mode: only output either the detected version or error (in JSON format)
   This was meant for better framework integration, but on the other hand it shouldn't be a big deal for a 
   dev to 'grep' from current/more chatty output (hint: errors always start like ">> ERROR: ", without quotes)
