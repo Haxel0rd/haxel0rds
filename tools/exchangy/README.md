@@ -2,7 +2,7 @@
 * RECODED! now made for longterm stability! New core, new internal database (now independant from msdocs), updater, etc. 
 * NEW features: detections updater, hint a new tool version, target online-checks, manual enter mode, bugfixes, improved errorhandling, etc. 
 * Requires: Exchange with OWA to run at target
-* Works: remote / unauthenticated / (BlackBox view)
+* Works: remote / unauthenticated / (BlackBox point of view)
 * Tested with: Win / Linux / py3.7.0 (only native libs)
 * Supports: from Exchange Server 5.0 up to 2019 (and upwards)
 * Works for targets with SSL/TLS even in older versions
