@@ -41,8 +41,8 @@
 * Version: v1.01
 * Released: 02/2021
 * Author: Haxel0rd
-* Published under the GNU General Public Licence v3
 * BUG REPORTS TO: twitter.com/haxel0rd
+* Published under the GNU General Public Licence v3
 * State: actively updating detections, 
   fixing major/breaking bugs and those that dont require 
   too much time investment (dont want to touch depper parts of the code). Atm not planed to add new features.
