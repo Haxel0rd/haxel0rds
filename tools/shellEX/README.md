@@ -1,5 +1,4 @@
 ## shellEX v1.0 - Hafnium vulneraribility & infection scanner:
---------------------------------------------------------------
 * Scans targets for CVE-2021-26855 & webshell infections
 * i made the tool initially for internal use in our 
   company, when we had to mitigate Hafnium for 3000+ customers
