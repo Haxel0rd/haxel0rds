@@ -9,7 +9,6 @@
 * Multithreaded, built for Mass-Scanning purposes, you can easily apply a list with thousands of targets!!
 * Requires URL (-t) or list of URLs (-i) to Mailgateway (i.e.: 'mail.company.com') or run on single target
 * Many tweaking options! Includes different SSRF detection approach (default is the nmap way of checking)
-
 * Almost no false/positives as the scanner has already implemented checks for this
 * Smartscanning, saving requests and therefore unnecessary traffic to offline hosts
 * Implemented Failchecks on function and target stability
