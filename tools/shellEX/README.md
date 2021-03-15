@@ -27,8 +27,8 @@
 * Example 7:          python3 shellEX.py -i targets.txt -o results.txt -a supp0rt2,shell2 -v -n -c 0.5 -f 50 -x 100
 <br />
 
-NOTE: some of the Hafnium webshells look like a 404 page, mostly those in /owa/* dir (
-      as seen in the early days (90's) with good old 404-shell lol)
+NOTE1: some shells look like random names, but actually use have 'fixed random'
+NOTE2: some Hafnium shells look like a 404 page, mostly those in /owa/* dir (like nostalgic '404-shell' does)
 
 ## Options and Tweaks
 * (-h) halp page
