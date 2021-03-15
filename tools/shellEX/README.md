@@ -1,8 +1,7 @@
 ## shellEX v1.0 - Hafnium vulneraribility & infection scanner:
+* MANY FEATURES and RELIABLE DETECTION!!
 * Scans targets for CVE-2021-26855 & webshell infections
-* i made the tool initially for internal use in our 
-  company, when we had to mitigate Hafnium for 3000+ customers
-* The tool was designed to work remote, from a 'BlackBox' point-of-view
+* i initially made this tool for internal use in our company when we had to mitigate Hafnium for 3000+ customers
 * Tested with Python 3.7 (native install, no additional libs), on win/linux
 * Not my best/cleanest code, but it did the job pretty well, so now releasing this to public
 * Detecting over 90 different shell variants (first wave, week one after initial report from Microsoft)
@@ -11,6 +10,7 @@
 * Many tweaking options! Includes different SSRF detection approach (default is the nmap way of checking)
 * Almost no false/positives as the scanner has already implemented checks for this
 * Smartscanning, saving requests and therefore unnecessary traffic to offline hosts
+* The tool was designed to work remote, from a 'BlackBox' point-of-view
 * Implemented Failchecks on function and target stability
 * Creation: 03/2021, version: v1.0
 * Run the tool -h for more info
