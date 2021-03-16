@@ -1,6 +1,6 @@
 ## ShellEX v1.0 - HAFNIUM Vulneraribility & Infection Scanner:
 * MANY FEATURES and RELIABLE DETECTION!!
-* Scans targets for CVE-2021-26855 & webshell infections
+* Scans Exchange Servers for CVE-2021-26855 & webshell infections
 * i initially made this tool for internal use in our company when we had to mitigate Hafnium for 3000+ customers
 * Tested with Python 3.7 (native install, no additional libs), on win/linux
 * Not my best/cleanest code, but it did the job pretty well, so now releasing this to public
