@@ -34,7 +34,7 @@ NOTE2: some Hafnium shells look like a 404 page, mostly those in /owa/* dir (lik
 * (-h) halp page
 * (-x) Threadnumber
 * (-c) Scanning Timeout
-* (-d  disable smart scanning)
+* (-d) disable smart scanning
 * (-f) False/Positive threshold
 * (-a) add custom shells for detection
 * (-t) define single target (needs URL)
