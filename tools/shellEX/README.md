@@ -6,7 +6,7 @@
 * Not my best/cleanest code, but it did the job pretty well, so now releasing this to public
 * Detecting over 90 different shell variants (first wave, week one after initial report from Microsoft)
 * Multithreaded, built for Mass-Scanning purposes, you can easily apply a list with thousands of targets!!
-* Requires URL (-t) or list of URLs (-i) to Mailgateway (i.e.: 'mail.company.com') or run on single target
+* Requires URL (-t) to run on single target or list of URLs (-i) to Mailgateway (i.e.: 'mail.company.com') 
 * Many tweaking options! Includes different SSRF detection approach (default is the nmap way of checking)
 * Almost no false/positives as the scanner has already implemented checks for this
 * Smartscanning, saving requests and therefore unnecessary traffic to offline hosts
