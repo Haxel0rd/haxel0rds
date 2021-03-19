@@ -1,4 +1,7 @@
 ## Exchangy v1.01 - Exchange Server version & patchlevel detection   
+<br />
+* NOTE: currently the tool must be re-run after detection update (small bug, sorry, will fix that soon). Update happens automatically when you run the tool.
+<br />
 * RECODED! now made for longterm stability! New core, new internal database (now independant from msdocs), updater, etc. 
 * NEW features: detections updater, hint a new tool version, target online-checks, manual enter mode, bugfixes, improved errorhandling, etc. 
 * Requires: Exchange with OWA to run at target
