@@ -27,7 +27,7 @@
 * Example 7:          python3 shellEX.py -i targets.txt -o results.txt -a supp0rt2,shell2 -v -n -c 0.5 -f 50 -x 100
 <br />
 
-NOTE1: some shells look like random names, but actually use have 'fixed random'
+NOTE1: some shells look like random names, but for the cases of 1st wave, turns out to be mostly 'fixed random'<br />
 NOTE2: some Hafnium shells look like a 404 page, mostly those in /owa/* dir (like nostalgic '404-shell' does)
 
 ## Options and Tweaks
