@@ -14,7 +14,7 @@
 # ------------------------------------------------------------               #
 # - Creation:       06/2020, version: v1.00                                  #
 # - Recoded:        02/2021, version: v1.01                                  #
-# - Updates/Fixes:  08/2021, version: v1.02                                  #
+# - Updates/Fixes:  09/2021, version: v1.02                                  #
 # - Requires OWA to run at target (fetching build number from there)         #
 # - Runs on: Win, Linux / py3 (tested: 3.7.0 native, no additional libs)     #
 # - Supports: Exchange 20XX down to Exchange prior 2000, SSL/TLS any version #
