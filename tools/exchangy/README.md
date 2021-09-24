@@ -1,10 +1,12 @@
-## Exchangy v1.01 - Exchange Server version & patchlevel detection   
+## Exchangy v1.02 - Exchange Server version & patchlevel detection   
+* Smaller bugfixes and improvements (fixed update logic, improved networking and connections, etc.)
 
-NOTE: if the tool updated it's database, then re-run the tool so that changes take place. This is a (non-breaking) bug and will be fixed with next version.
+## What is this tool for?
+This tool was made for 'BlackBox' Information gathering puproses (e.g. when performing Pentests) to quickly identify the version and even patchlevel of a Microsoft Exchange Server. The tool comes with some bypass mechanisms and features to detect even hardened targets (e.g.: Firewalls, cleansed owa panels, etc.). You can run this tool from remote and you do NOT need to be authenticated on the target Server. 
 
-* RECODED! now made for longterm stability! New core, new internal database (now independant from msdocs), updater, etc. 
-* NEW features: detections updater, hint a new tool version, target online-checks, manual enter mode, bugfixes, improved errorhandling, etc. 
-* Requires: Exchange with OWA to run at target
+* Detecs almost all Exchange Server Versions!
+* Made for longterm stability! Has own internal db.
+* Requires: Exchange with OWA to run at target (better chances for results)
 * Works: remote / unauthenticated / (BlackBox point of view)
 * Tested with: Win / Linux / py3.7.0 (only native libs)
 * Supports: from Exchange Server 5.0 up to 2019 (and upwards)
