@@ -128,7 +128,8 @@ office365 = False
 skipOnline = False
 owaConfirmed = False
 xchConfirmed = False
-ExchangyVersion = 'v1.02' # REMINDER: 
+foundMultiple = False
+exchangyVersion = 'v1.02' # REMINDER: 
 # CHANGE THIS WHEN RELEASING NEW VERSIONS OF THIS TOOL!
 # ALSO UPDATE: tool internal DB, BANNER and the printout of HELP text
 # [at all 3 places, the version number must be changed to the new one!]
@@ -262,7 +263,7 @@ def db_broken():
 
 def init():
 # parse option args and load prepare init
-  global owa, target, port, host, enterMode, skipOnline, owaConfirmed
+  global owa, target, port, host, enterMode, skipOnline, owaConfirmed, manualMode
   target = ''
   rport = ''
   options = args()
@@ -322,7 +323,7 @@ def init():
     newVersion = json.loads(update)
     newVersion = newVersion["toolinfo"]["tool_version_latest"]
     updateVersion = newVersion.replace('v','').replace('.','')
-    currentVersion = ExchangyVersion.replace('v','').replace('.','')
+    currentVersion = exchangyVersion.replace('v','').replace('.','')
     if (updateVersion > currentVersion):
       print('>> Exchangy '+newVersion+' is available (-h for dl-link)')
   except Exception as err:
@@ -557,7 +558,7 @@ def owa2():
 def owax():
   # This is new since v1.02 and was implemented to deal with incomplete owa version numbers, when Microsoft introduced build numbers for Security Patches (SU).
   # Example: Exchange 2019 CU8 shows "15.2.792.3" as buildnumber(s) in owa, these numbers were unique before the SU buildnumbers were introduced. But now we 
-  # have "15.2.792.3" for Exchange 2019 CU8 + all 3 Security Updates. With the vresion indicators given in v1.01, the tool had no chance to distinguish between
+  # have "15.2.792.3" for Exchange 2019 CU8 + all 3 Security Updates. With the version indicators given in v1.01, the tool had no chance to distinguish between
   # CU Update, or CU Update + SU. Therefore, a new method is introduced. We could put this before the other methods to save a request or two, but nvm. - we will
   # only use this as fallback incase we have more than one build number match, which would render the results fetched from owa indicators unreliable. We could use 
   # this method instead of owa-method and shorten the tool, but then there are scenarios where the below method fails, then we need owa method again. Therefore, 
@@ -577,8 +578,8 @@ def owax():
 
 
 def mslookup():
-# lookup msdocs for owa build numbers
-  global owa, xch, plv, rls, xchConfirmed, mdb
+# lookup db for owa build numbers
+  global owa, xch, plv, rls, xchConfirmed, mdb, foundMultiple
   msdb = json.loads(db)
   mdb = None
   if (office365 == True):
@@ -592,9 +593,12 @@ def mslookup():
       # check for duplicate entries due to incomplete buildnumber retrieved from SU updates 
       # in combination with owa build number, auto-corrects on success of sidechannel leakage
       if(len(re.findall(owa,str(msdb)))>1):
-        corrected = owax()
-        if corrected:
-          owa = corrected
+        if not enterMode:
+          corrected = owax()
+          if corrected:
+            owa = corrected
+        else:
+          foundMultiple = True
       for item in msdb:
         try:
           if re.search(owa,msdb[item]["buildno_s"]):
@@ -695,19 +699,23 @@ def rgen():
     print('   > Release Date:      '+rls)
     print('   > Buildnumber:       '+owa)
     print('   ---------------------------------------------')
+  if foundMultiple:
+    print('!! INFO: entered number has multiple matches, results')
+    print('   will only show the main version (including CU), but')
+    print('   SU version requires manual confirmation!')
   if (xch == '<unknown>' and owa != '<unknown>'):
-    print('** Could not retrieve Exchange version,')
+    print('!! Could not retrieve Exchange version,')
     print('   requires manual research of build number.')
     print('** All checks performed, exiting.')
     sys.exit('** May the force be with you.\n\n')
   elif (xch != '<unknown>' and owa == '<unknown>'):
-    print('** Could not retrieve Exchange version,')
+    print('!! Could not retrieve Exchange version,')
     print('   the target may be customized to heavily.')
     print('   You can try adding build number manually (-e)')
     print('** All checks performed, exiting.')
     sys.exit('** May the force be with you.\n\n')
   elif (owa == '/'):
-    print('** Target runs Office365 via ADFS Single Sign-on')
+    print('!! Target runs Office365 via ADFS Single Sign-on')
     print('   (no Exchange, mailing is hosted by Microsoft).')
     print('** All checks performed, exiting.')
     sys.exit('** May the force be with you.\n\n')
@@ -717,46 +725,26 @@ def rgen():
 
 
 def netw(packet):
-# networking functions based on raw sockets.. from Haxe with <3
-  unfound = 1
+  # since v1.02; recoded networking func, under watch until proven error free.
   response = ''
-  while unfound < 5:
-    try:
-      https = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-      if (unfound == 1):
-          sock = ssl.wrap_socket(https, ssl_version=ssl.PROTOCOL_TLSv1_2)
-      if (unfound == 2):
-          sock = ssl.wrap_socket(https, ssl_version=ssl.PROTOCOL_TLSv1_1)
-      if (unfound == 3):
-          sock = ssl.wrap_socket(https, ssl_version=ssl.PROTOCOL_TLSv1)
-      if (unfound == 4):
-          sock = ssl.wrap_socket(https, ssl_version=ssl.PROTOCOL_SSLv23)
-      sock.settimeout(7)
-      sock.connect(host)
-      sock.send(packet.encode("utf-8"))
-      i = 0;
-      e = 0;
-      while i < 1337: # Limited rounds to prevent getting stuck in loops when no EOF
-        chunk = str(sock.recv(4096))
-        response += chunk
-        response = response.replace('\\r\\n','').replace('\r\n','')
-        if re.search('</body></html>',str(response)) != None:
-          unfound = 5
-          break
-        if (chunk == "b''"):
-          e+=1
-          if (e > 7):
-            unfound = 5
-            break
-        i+=1
-      unfound+=1
-    except socket.error as sockerr:
-      err = re.search('\[Errno ([0-9].+)\]',str(sockerr))
-      unfound+=1
-    except socket.timeout:
-      print('** ERROR sending packet: timeouted (target online?)')
-      print('   Sorry we can\'t continue, exiting ...')
-      sys.exit('** May the force be with you.\n\n')
+  https = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+  sock = ssl.create_default_context().wrap_socket(https, server_hostname=host[0])
+  sock.settimeout(7)
+  try:
+    sock.connect(host)
+    sock.send(packet.encode("utf-8"))
+    i = 0;
+    while i < 33: # Limited rounds to prevent getting stuck in loops when no EOF
+      chunk = str(sock.recv())
+      response += chunk
+      response = response.replace('\\r\\n','').replace('\r\n','')
+      if re.search('</body></html>',str(response)) != None:
+        break
+      i+=1
+  except socket.error as sockerr:
+    print('** ERROR sending packet: sockerr: '+str(sockerr))
+  except socket.timeout:
+    print('** ERROR sending packet: timeouted')
   return response
 
 
