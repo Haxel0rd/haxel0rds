@@ -8,7 +8,7 @@ This tool was made for 'BlackBox' Information gathering puproses (e.g. when perf
 
 
 * Detecs almost all Exchange Server Versions!
-* Works: remote / unauthenticated / (BlackBox point of view)
+* Works: remote / unauthenticated / BlackBox point of view
 * Requires: Exchange Server running at target ip or domain
 * Made for longterm stability! Has own internal database
 * Tested with: Win / Linux / py3.7.0 (only native libs)
