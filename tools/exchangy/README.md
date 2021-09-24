@@ -8,13 +8,13 @@ This tool was made for 'BlackBox' Information gathering puproses (e.g. when perf
 
 
 * Detecs almost all Exchange Server Versions!
-* Made for longterm stability! Has own internal db.
-* Requires: Exchange with OWA to run at target (better chances for results)
 * Works: remote / unauthenticated / (BlackBox point of view)
+* Requires: Exchange Server running at target ip or domain
+* Made for longterm stability! Has own internal database
 * Tested with: Win / Linux / py3.7.0 (only native libs)
-* Supports: from Exchange Server 5.0 up to 2019 (and upwards)
 * Works for targets with SSL/TLS even in older versions
 * Failchecks and different detection mechanisms
+* Can bypass some firewall protection mechanisms
 * Can deal with cleaned and customized panels
 * Run the tool with -h to display help page.
 <br />
