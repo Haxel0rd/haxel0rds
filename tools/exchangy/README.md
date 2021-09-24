@@ -1,8 +1,11 @@
 ## Exchangy v1.02 - Exchange Server version & patchlevel detection   
-* Smaller bugfixes and improvements (fixed update logic, improved networking and connections, etc.)
+* Last updated: 09/2021, v1.01 => v1.02 (current, stable)
+* Bugfixes and improvements (fixed update logic, improved networking and connections, improved detection, etc.)
+
 
 ## What is this tool for?
 This tool was made for 'BlackBox' Information gathering puproses (e.g. when performing Pentests) to quickly identify the version and even patchlevel of a Microsoft Exchange Server. The tool comes with some bypass mechanisms and features to detect even hardened targets (e.g.: Firewalls, cleansed owa panels, etc.). You can run this tool from remote and you do NOT need to be authenticated on the target Server. 
+
 
 * Detecs almost all Exchange Server Versions!
 * Made for longterm stability! Has own internal db.
@@ -15,6 +18,7 @@ This tool was made for 'BlackBox' Information gathering puproses (e.g. when perf
 * Can deal with cleaned and customized panels
 * Run the tool with -h to display help page.
 <br />
+
 
 ## How to use (examples):
 * basic:              python3 exchangy.py 
@@ -33,6 +37,7 @@ This tool was made for 'BlackBox' Information gathering puproses (e.g. when perf
                       is entered manually and then looked up in the tools internal database
 <br />
 
+
 ## Not included (maybe in the future):
 * CVE awareness: show if s server is vulnerable. But i dropped on this as i don't have the time 
   maintain a list of Exchange related CVE's (ontop of updates for new exchange patchlevels)
@@ -41,6 +46,7 @@ This tool was made for 'BlackBox' Information gathering puproses (e.g. when perf
   dev to 'grep' from current/more chatty output (hint: errors always start like ">> ERROR: ", without quotes)
 * In manual enter mode (-e), add optional feeding of the number like -e 1.22.333, but this wasn't implemented.
 <br />
+
 
 ## About
 * Version: v1.01
@@ -56,5 +62,6 @@ This tool was made for 'BlackBox' Information gathering puproses (e.g. when perf
   manual enter mode), improved error handling, several bugfixes, code tidied up and commented.
 * Check tools header comment-section for additional infos (i.e. regarding non-supported weak SSL/TLS ciphers)
 <br />
+
 
 May the force be with you.
