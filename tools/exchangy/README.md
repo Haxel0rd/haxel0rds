@@ -48,15 +48,15 @@ This tool was made for 'BlackBox' Information gathering puproses (e.g. when perf
 
 
 ## About
-* Version: v1.01
-* Released: 02/2021
+* Version: v1.02
+* Released: 09/2021
 * Author: Haxel0rd
 * BUG REPORTS TO: twitter.com/haxel0rd
 * Published under the GNU General Public Licence v3
-* State: actively updating detections, 
-  fixing major/breaking bugs and those that dont require 
-  too much time investment (dont want to touch depper parts of the code). Atm not planed to add new features.
-* Changelog v1.1: recoded, better core, improved detections, now running with internal db, improved bypasses,
+* State: actively updating detections, fixing major/breaking bugs
+* Changelog v1.02: Now covering SU Updates! Also: Bugfixes and improvements (fixed update logic, improved 
+  networking and connections, improved detection, etc.)
+* Changelog v1.01: recoded, better core, improved detections, now running with internal db, improved bypasses,
   detection updater, show new tool version, target online probes, new modes (skip online checks, skip updates, 
   manual enter mode), improved error handling, several bugfixes, code tidied up and commented.
 * Check tools header comment-section for additional infos (i.e. regarding non-supported weak SSL/TLS ciphers)
