@@ -44,7 +44,6 @@ This tool was made for 'BlackBox' Information gathering puproses (e.g. when perf
 * Quiet-mode: only output either the detected version or error (in JSON format)
   This was meant for better framework integration, but on the other hand it shouldn't be a big deal for a 
   dev to 'grep' from current/more chatty output (hint: errors always start like ">> ERROR: ", without quotes)
-* In manual enter mode (-e), add optional feeding of the number like -e 1.22.333, but this wasn't implemented.
 <br />
 
 
