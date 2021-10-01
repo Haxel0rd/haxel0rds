@@ -1,6 +1,6 @@
-## Exchangy v1.02 - Exchange Server version & patchlevel detection   
-* Last updated: 09/2021, v1.01 => v1.02 (current, stable)
-* Bugfixes and improvements (fixed update logic, improved networking and connections, improved detection, etc.)
+## Exchangy v1.03 - Exchange Server version & patchlevel detection   
+* Last updated: 09/2021, v1.02 => v1.03 (current, stable)
+* Bugfix with invalid SSL certs
 
 
 ## What is this tool for?
