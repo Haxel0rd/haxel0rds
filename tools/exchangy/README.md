@@ -31,7 +31,7 @@ This tool was made for 'BlackBox' Information gathering puproses (e.g. when perf
 * skip online probe:  python3 exchangy.py -s
                       skips the "is target online?" checks
 * skip (db) update:   python3 exchangy.py -u    
-                      skips database updates (updates for tool must be done by manual download anyways)
+                      skips database updates (updates for the tool itself must be done by manual download)
 * enter buildno:      python3 exchangy.py -e    
                       in enter mode, no requests to a target are being made, the number 
                       is entered manually and then looked up in the tools internal database
