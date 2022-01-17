@@ -48,7 +48,7 @@ This tool was made for 'BlackBox' Information gathering puproses (e.g. when perf
 
 
 ## About
-* Version: v1.02
+* Version: v1.03
 * Released: 09/2021
 * Author: Haxel0rd
 * BUG REPORTS TO: twitter.com/haxel0rd
