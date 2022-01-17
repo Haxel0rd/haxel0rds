@@ -4,7 +4,7 @@
 
 
 ## What is this tool for?
-This tool was made for 'BlackBox' Information gathering puproses (e.g. when performing Pentests) to quickly identify the version and even patchlevel of a Microsoft Exchange Server. The tool comes with some bypass mechanisms and features to detect even hardened targets (e.g.: Firewalls, cleansed owa panels, etc.). You can run this tool from remote and you do NOT need to be authenticated on the target Server. 
+This tool was made for 'BlackBox' Information gathering puproses (i.e. when performing Pentests) to quickly identify the version and even patchlevel of a Microsoft Exchange Server. The tool comes with some bypass mechanisms and features to detect even hardened targets (e.g.: Firewalls, cleansed owa panels, etc.). You can run this tool from remote and you do NOT need to be authenticated on the target Server. 
 
 
 * Detecs almost all Exchange Server Versions!
