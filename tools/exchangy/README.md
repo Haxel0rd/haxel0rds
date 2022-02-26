@@ -1,6 +1,6 @@
-## Exchangy v1.03 - Exchange Server version & patchlevel detection   
-* Last updated: 09/2021, v1.02 => v1.03 (current, stable)
-* Bugfix with invalid SSL certs
+## Exchangy v1.04 - Exchange Server version & patchlevel detection   
+* Last updated: 02/2022, v1.03 => v1.04 (current, stable)
+* Small bugfix for connections when using sidechannel
 
 
 ## What is this tool for?
@@ -48,8 +48,8 @@ This tool was made for 'BlackBox' Information gathering puproses (i.e. when perf
 
 
 ## About
-* Version: v1.03
-* Released: 09/2021
+* Version: v1.04
+* Released: 02/2022
 * Author: Haxel0rd
 * BUG REPORTS TO: twitter.com/haxel0rd
 * Published under the GNU General Public Licence v3
